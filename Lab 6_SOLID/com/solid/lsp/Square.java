@@ -1,6 +1,6 @@
 package com.solid.lsp;
 
-public class Square implements Shape {
+public class Square {
     private int side;
     Square(int side) {
         this.side = side;
@@ -14,7 +14,6 @@ public class Square implements Shape {
         return side;
     }
     
-    @Override
     public int getArea(){
         return side * side;
     }
