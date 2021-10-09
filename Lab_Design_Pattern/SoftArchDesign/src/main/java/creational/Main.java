@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         // Current usage
-        BookMetadataFormatter formatter = null;
+        /*BookMetadataFormatter formatter = null;
         try {
             formatter = BookMetadataFormatterFactory.getBookMetadataFormatter(BookMetadataFormatterFactory.Format.CSV);
             formatter.append(TestData.dragonBook);
@@ -18,12 +18,12 @@ public class Main {
             e.printStackTrace();
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
-        }
+        }*/
 
         // Expected usage
-//        BookMetadataExporter exporter = new XMLBookMetadataExporter();
-//        exporter.add(TestData.sailboatBook);
-//        exporter.add(TestData.GoFBook);
-//        exporter.export(System.out);
+        BookMetadataExporter exporter = new JSONBookMetadataExporter();
+        exporter.add(TestData.sailboatBook);
+        exporter.add(TestData.GoFBook);
+        exporter.export(System.out);
     }
 }
