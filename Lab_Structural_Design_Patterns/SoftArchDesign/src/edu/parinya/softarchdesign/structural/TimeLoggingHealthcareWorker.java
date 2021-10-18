@@ -8,7 +8,8 @@ public class TimeLoggingHealthcareWorker extends HealthcareWorkerDecorator{
 
     @Override
     public void service() {
-        System.out.print("Thu Oct 14 00:57:26 ICT 2021: ");
+        java.util.Date date=new java.util.Date();
+        System.out.print(date + ": ");
         super.service();
     }
 }
